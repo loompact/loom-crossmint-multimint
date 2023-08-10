@@ -1,7 +1,7 @@
 {
-  "name": "loom-crossmint-barebone",
+  "name": "loom-crossmint-multimint",
   "version": "0.1.0",
-  "description": "LOOM NFT Credit Card Payment Interface",
+  "description": "LOOMPACT NFT Credit Card Payment Interface",
   "private": true,
   "author": "LOOM IMPACT AG - LOOMPACT",
   "dependencies": {

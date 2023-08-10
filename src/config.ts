@@ -1,8 +1,11 @@
-export const crossmintNET = 
-  process.env.REACT_APP_CROSSMINT_NET || null;
+export const crossmintProjectID =
+process.env.REACT_APP_CROSSMINT_PROJECT_ID || null;
 
-export const crossmintID =
-  process.env.REACT_APP_CROSSMINT_ID || null
+export const crossmintCollectionID =
+process.env.REACT_APP_CROSSMINT_COLLECTION_ID || null;
+
+export const crossmintNET = 
+process.env.REACT_APP_CROSSMINT_NET || null
 
 /* export const network = (process.env.REACT_APP_SOLANA_NETWORK ||
 WalletAdapterNetwork.Devnet) as WalletAdapterNetwork;

@@ -8,7 +8,7 @@ This code implements a "iframe-able" page to be integrated anywhere in your site
 
 ### Prerequisites
 
-- a properly set up Candy Machine on Solana *(I've used a CM v3 "v1"-type for my tests)*
+- a properly set up NFT Collection contract on a Crossmint-supported chain *(I've used a Solana-based Candy Machine V3 "v1"-type on Solana for my tests)*
 - a JS/REACT dev environment including the "typical" tools (npm etc.)
 
 ### Installation & start

@@ -1,6 +1,6 @@
-# Dynamic quantity (multi-mint) button implementation for Crossmint/Solana CMv3 drops
+# Dynamic quantity (multi-mint) Crossmint button implementation (e.g. for Solana CMv3 drops)
 
-This code implements a "iframe-able" page to be integrated anywhere in your site for operating a Solana/CandyMachine-based NFT drop.
+This code implements a "iframe-able" page to be integrated anywhere in your site for operating a Solana/CandyMachine-based NFT drop. It also can be used for other Crossmint-supported ontract types like 'erc-721', 'erc-1155', 'thirdweb-drop' or 'thirdweb-edition-drop' but I haven't tested that yet...
 
 ### Preview
 

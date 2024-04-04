@@ -1,5 +1,5 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
 import styled from "styled-components";
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { crossmintProjectID } from "./config.ts";
@@ -22,7 +22,7 @@ const MinusIcon = (props) => (
       strokeLinejoin="round"
     />
   </svg>
-)
+);
 
 const PlusIcon = (props) => (
   <svg
@@ -40,7 +40,7 @@ const PlusIcon = (props) => (
       strokeLinejoin="round"
     />
   </svg>
-)
+);
 
 const ButtonWrap = styled.div`
   padding: 3px 4px;
@@ -82,7 +82,7 @@ const NumberInput = styled.div`
 `;
 
 const NumericField = styled.input`
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 20px;
   padding: 0;
   vertical-align: middle;
@@ -114,62 +114,60 @@ const NumericField = styled.input`
 `;
 
 function App() {
-  const mintMaximum = 5 // Maximum amount of NFTs per transaction
-  
+  const mintMaximum = 5; // Maximum amount of NFTs per transaction
+
   const [mintAmount, setMintAmount] = useState(1);
 
   const handleDecrement = () => {
     if (mintAmount <= 1) return;
     setMintAmount(mintAmount - 1);
-  }
+  };
 
   const handleIncrement = () => {
     if (mintAmount >= mintMaximum) return;
     setMintAmount(mintAmount + 1);
-  }
+  };
 
   return (
     <div className="App">
       <header className="App-header">
-      <ButtonWrap>
-        <CrossmintPayButton
-        projectId={crossmintProjectID}
-        collectionId={crossmintCollectionID}
-        environment={crossmintNET}
-        className="xmint-btn"
-        locale="en-US"
-        currency="USD"
-        mintConfig={{
-        type: "candy-machine",
-        quantity: mintAmount
-        }}
-        />
-
-        <NumberInput>
-          <NumbericIcon
-            onClick={() => handleDecrement()}
-          >
-            <MinusIcon></MinusIcon>
-          </NumbericIcon>
-
-          <NumericField
-            type="text"
-            className="mint-amt"
-            disabled
-            // step={1}
-            // min={1}
-            // max={mintMaximum}
-            value={mintAmount}
+        <ButtonWrap>
+          <CrossmintPayButton
+            projectId={crossmintProjectID}
+            collectionId={crossmintCollectionID}
+            environment={crossmintNET}
+            className="xmint-btn"
+            locale="en-US"
+            currency="USD"
+            mintConfig={{
+              type: "candy-machine",
+              quantity: mintAmount,
+            }}
+            checkoutProps={{
+              paymentMethods: ["fiat", "ETH", "SOL"],
+          }}
           />
 
-          <NumbericIcon
-            onClick={() => handleIncrement()}
-          >
-            <PlusIcon></PlusIcon>
-          </NumbericIcon>
-        </NumberInput>
-      </ButtonWrap>
-            
+          <NumberInput>
+            <NumbericIcon onClick={() => handleDecrement()}>
+              <MinusIcon></MinusIcon>
+            </NumbericIcon>
+
+            <NumericField
+              type="text"
+              className="mint-amt"
+              disabled
+              // step={1}
+              // min={1}
+              // max={mintMaximum}
+              value={mintAmount}
+            />
+
+            <NumbericIcon onClick={() => handleIncrement()}>
+              <PlusIcon></PlusIcon>
+            </NumbericIcon>
+          </NumberInput>
+        </ButtonWrap>
       </header>
     </div>
   );

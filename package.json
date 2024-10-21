@@ -1,9 +1,9 @@
 {
   "name": "loom-crossmint-multimint",
-  "version": "0.1.1",
-  "description": "LOOMPACT NFT Credit Card Payment Interface",
+  "version": "0.2.1",
+  "description": "LOOMPACT NFT Crossmint Payment Interface",
   "private": true,
-  "author": "LOOM IMPACT AG - LOOMPACT",
+  "author": "LOOMPACT AG",
   "dependencies": {
     "@crossmint/client-sdk-react-ui": "1.1.9",
     "react": "^18.2.0",
